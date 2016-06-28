@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-<%--<%@taglib prefix="headerTemplate" tagdir="/WEB-INF/tags" %>--%>
+<%@taglib prefix="headerTemplate" tagdir="/WEB-INF/tags" %>
 
 <%@attribute name="title" fragment="true" %>
 <%@attribute name="header" fragment="true" %>
@@ -20,7 +20,7 @@
     <link href="${startertemplate}" rel="stylesheet" />
 
     <!-- Custom Fonts -->
-    <spring:url value="/resources/font-awesome/css/font-awesome.min.css" var="fontawesome"/>
+    <spring:url value="/resources/font-awesome/css/font-awesome.css" var="fontawesome"/>
     <link href="${fontawesome}" rel="stylesheet" />
 
     <!-- jQuery -->
@@ -45,6 +45,8 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
+                <a href="<%=request.getContextPath()%>?languageVar=en">EN</a>
+                <a href="<%=request.getContextPath()%>?languageVar=ru">RU</a>
                 <p>Copyright © 2016</p>
             </div>
         </div>
